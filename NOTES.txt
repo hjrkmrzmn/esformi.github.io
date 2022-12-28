@@ -1,0 +1,98 @@
+
+
+<!--------------------------------- HMM ----------------------------------->
+
+function tot_D21() 
+{
+  var totalCal = 0;
+  var S1 = document.getElementById("tm_011"); 
+  var A1 = document.getElementById("tm_021"); 
+  var D1 = document.getElementById("tm_031"); 
+  var A2 = document.getElementById("tm_022"); 
+  var D2 = document.getElementById("tm_032"); 
+  var S2 = document.getElementById("tm_012"); 
+  var A3 = document.getElementById("tm_023"); 
+  var S3 = document.getElementById("tm_013"); 
+  var A4 = document.getElementById("tm_024"); 
+  var D3 = document.getElementById("tm_033"); 
+  var S4 = document.getElementById("tm_014"); 
+  var S5 = document.getElementById("tm_015"); 
+  var D4 = document.getElementById("tm_034"); 
+  var S6 = document.getElementById("tm_016"); 
+  var A5 = document.getElementById("tm_025"); 
+  var D5 = document.getElementById("tm_035"); 
+  var D6 = document.getElementById("tm_036"); 
+  var S7 = document.getElementById("tm_017"); 
+  var A6 = document.getElementById("tm_026");
+  var A7 = document.getElementById("tm_027"); 
+  var D7 = document.getElementById("tm_037"); 
+  
+  var tm_011 = S1.options[S1.selectedIndex].value;
+  var tm_012 = S2.options[S2.selectedIndex].value;
+  var tm_013 = S3.options[S3.selectedIndex].value;
+  var tm_014 = S4.options[S4.selectedIndex].value;
+  var tm_015 = S5.options[S5.selectedIndex].value;
+  var tm_016 = S6.options[S6.selectedIndex].value;
+  var tm_017 = S7.options[S7.selectedIndex].value;
+  
+  var tm_021 = A1.options[A1.selectedIndex].value;
+  var tm_022 = A2.options[A2.selectedIndex].value;
+  var tm_023 = A3.options[A3.selectedIndex].value;
+  var tm_024 = A4.options[A4.selectedIndex].value;
+  var tm_025 = A5.options[A5.selectedIndex].value;
+  var tm_026 = A6.options[A6.selectedIndex].value;
+  var tm_027 = A7.options[A7.selectedIndex].value;
+  
+  
+  var tm_031 = D1.options[D1.selectedIndex].value;
+  var tm_032 = D2.options[D2.selectedIndex].value;
+  var tm_033 = D3.options[D3.selectedIndex].value;
+  var tm_034 = D4.options[D4.selectedIndex].value;
+  var tm_035 = D5.options[D5.selectedIndex].value;
+  var tm_036 = D6.options[D6.selectedIndex].value;
+  var tm_037 = D7.options[D7.selectedIndex].value;
+  
+  
+
+  
+  var totalCal1 = +tm_011 + +tm_012 + +tm_013 + +tm_014  + +tm_015  + +tm_016  + +tm_017;
+  document.getElementById("tm").value = totalCal;
+  return totalCal;
+  
+  var totalCal2 = +tm_021 + +tm_022 + +tm_023 + +tm_024  + +tm_025  + +tm_026 + +tm_027;
+  document.getElementById("tm").value = totalCal;
+  return totalCal;
+  
+  var totalCal3 = +tm_031 + +tm_032 + +tm_033 + +tm_034  + +tm_035 + +tm_036  + +tm_037;
+  document.getElementById("tm").value = totalCal;
+  return totalCal;
+}
+
+<!--------------------------------- HMM ----------------------------------->
+
+// <li><a href="#" onclick="window.location='index1.html'"><span>Mental Health Test</span></a> //
+
+	<section id="fh5co-explore" data-section="testQ">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Mental Health Test</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Welcome back!</h3>
+							<li><a href="#" onclick="window.location='CATEGORIES.html'"><span>Mental Health Test</span></a></li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="fh5co-explore">
+			<div class="container">
+				<div class="row">
+		
+	<div class="limiter">
+		
+	</div>
+	</section>
+	

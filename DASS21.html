@@ -1,0 +1,379 @@
+<html>
+
+<head>
+	<title>ESFORMI</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../ESFORMI/w3.css">
+	<link rel="stylesheet" href="../ESFORMI/font.css">
+	<link rel="stylesheet" href="../ESFORMI/styles.css">
+	    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+	<script src="../ESFORMI/calculationDass.js"></script>
+	<style>
+
+body {
+  background-image: url('../ESFORMI/images/esformi4.jpg'); 
+	background-attachment: fixed; 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/* For screen yang big big: */
+@media only screen and (min-width: 700px) {
+  body { 
+     background-image: url('../ESFORMI/images/esformi4.jpg');
+	background-attachment: fixed; 
+	background-repeat: repeat;
+	background-size: 78% 100%;
+	background-position: right; 
+  }
+}
+
+  @media print {
+      h1, div, p,td, tr, input, strong {
+        color: black;
+      }
+
+      @media print and (-webkit-min-device-pixel-ratio:0) {
+        h1, div, p,td, tr, input, strong {
+          color: black;
+          -webkit-print-color-adjust: black;
+        }
+      }
+   }
+	</style>
+</head>
+
+<body >
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>ESFORMI<br>EXPERT SYSTEM<br>FOR<br>MENTAL ILLNESS</b></h3>
+  </div>
+  <div class="w3-bar-block">
+	<a href="#questionnaire" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Questionnaire</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>ESFORMI</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+    <div class="row">
+  <div class="w3-container" style="margin-top:80px; height:120vh" id="showcase">
+    <h2 class="w3-jumbo"><b>EXPERT SYSTEM FOR MENTAL ILLNESS (ESFORMI)</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  
+	
+ <!-- Questionnaire -->
+  <div class="w3-container" id="questionnaire" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>DASS21 Question</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Students required to answer all this questionnaire.
+    </p>
+    <p><b>Kindly answer all the questions truthfully</b>:</p>
+  </div>
+
+  <!-- Questionnaire -->
+	<div class="w3-row-padding w3-grayscale" style="text-align:center">
+			<div class="row">
+				<div class="column" onclick="openTab('DASS21');" style="background:#9c9c9c;">
+					DASS21 Question
+				</div>
+
+			</div>
+
+<!--------------------------------- START PRIMARY QUESTIONN ----------------------------------->		
+			<div id="DASS21" class="containerTab" style="display:none;background:#9c9c9c">
+				<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> <br><br><br>
+					<table class="qtable" style="width:100%">
+						<tr class="qtr">
+							<th class="qth">DASS21</th>
+							<th class="qth">Rating Scale</th>
+						</tr>
+						<tr class="qtr">
+							<td class="qtd">I found it hard to wind down.</td>
+								<td class="qtd">
+									<select id="sre_011" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>
+						</tr>
+						<tr class="qtr">
+							<td class="qtd">I was aware of dryness of my mouth.</td>
+								<td class="qtd">
+									<select id="anx_021" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+						<tr class="qtr">
+							<td class="qtd">I couldn’t seem to experience any positive feeling at all .</td>
+								<td class="qtd">
+									<select id="dep_031" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+						<tr class="qtr">
+							<td class="qtd">I experienced breathing difficulty (e.g. excessively rapid breathing,breathlessness in the absence of physical exertion).</td>
+								<td class="qtd">
+									<select id="anx_022" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+						<tr class="qtr">
+							<td class="qtd">I found it difficult to work up the initiative to do things.</td>
+								<td class="qtd">
+									<select id="dep_032" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I tended to over-react to situations.</td>
+								<td class="qtd">
+									<select id="sre_012" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I experienced trembling (e.g. in the hands).</td>
+								<td class="qtd">
+									<select id="anx_023" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt that I was using a lot of nervous energy.</td>
+								<td class="qtd">
+									<select id="sre_013" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I was worried about situations in which I might panic and make a foolof myself.</td>
+								<td class="qtd">
+									<select id="anx_024" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt that I had nothing to look forward to.</td>
+								<td class="qtd">
+									<select id="dep_033" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I found myself getting agitated.</td>
+								<td class="qtd">
+									<select id="sre_014" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I found it difficult to relax.</td>
+								<td class="qtd">
+									<select id="sre_015" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt down-hearted and blue.</td>
+								<td class="qtd">
+									<select id="dep_034" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I was intolerant of anything that kept me from getting on with what Iwas doing .</td>
+								<td class="qtd">
+									<select id="sre_016" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt I was close to panic.</td>
+								<td class="qtd">
+									<select id="anx_025" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I was unable to become enthusiastic about anything.</td>
+								<td class="qtd">
+									<select id="dep_035" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt I wasn’t worth much as a person .</td>
+								<td class="qtd">
+									<select id="dep_036" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt that I was rather touchy .</td>
+								<td class="qtd">
+									<select id="sre_017" onchange="tot_sre()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I was aware of the action of my heart in the absence of physicalexertion (e.g. sense of heart rate increase, heart missing a beat).</td>
+								<td class="qtd">
+									<select id="anx_026" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt scared without any good reason.</td>
+								<td class="qtd">
+									<select id="anx_027" onchange="tot_anx()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+								<tr class="qtr">
+							<td class="qtd">I felt that life was meaningless .</td>
+								<td class="qtd">
+									<select id="dep_037" onchange="tot_dep()">
+										<option value="0">Did not apply to me at all</option>
+										<option value="1">Applied to me to of the time</option>
+										<option value="2">Applied to me to a good part of time</option>
+										<option value="3">Applied to me most of the time</option>
+									</select>
+								</td>					
+						</tr>
+						<tr class="qtr"> 
+							<th class="qth">Score</th>
+							<th class="qth"><input class="qinput" id="totalDep" type="text" readonly style="color: black;"></th>
+							<th class="qth"><input class="qinput" id="totalAnx" type="text" readonly style="color: black;"></th>
+							<th class="qth"><input class="qinput" id="totalSre" type="text" readonly style="color: black;"></th>
+						</tr>	
+					</table> <br><br>
+					
+				</div>
+<!--------------------------------- END PRIMARY QUESTIONN ----------------------------------->
+
+
+  <!-- Summary -->
+  <div class="w3-container" id="summary" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Severity Level.</b></h1>
+    <p>This summary section will analyze the severity level of respondent. Please click the button down there to see the result.</p>
+	<button onclick="Strength();">Result</button> <br><br>
+ </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Result</li>
+			<li class="w3-padding-16"><p style="color: black;" id="strength_tm"></p></li>
+			
+      </ul>
+    </div>
+        
+
+
+
+<!-- End page content -->
+</div>
+
+<div class="w3-black w3-container w3-padding-32" style="margin-top:75px;padding-right:58px; color: black;"><p class="w3-right">Copyright &copy; Universiti Teknologi MARA (UiTM) Shah Alam | Powered by <a style="color: grey;">CS2593E</a></p></div>
+
+
+</body>
+</html>

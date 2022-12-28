@@ -1,0 +1,3 @@
+onclick="window.location='index.html'"
+
+						<!-- <li><a href="#" onclick="window.location='index1.html'"><span>Mental Health Test</span></a></li> -->
